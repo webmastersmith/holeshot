@@ -9,16 +9,14 @@ export default function TextBox() {
   });
   return (
     <Show when={ready()}>
+      <div class={ready() ? styles.shadow : ''}></div>
       <div class={styles.textWrapper} id={ready() ? styles.flyIn : ''}>
         <div class={styles.textBox}>
           <p class={styles.electrical}>ELECTRICAL</p>
           <p class={styles.contractor}>CONTRACTOR</p>
           <p class={styles.area}>SERVICING CENTRAL TEXAS AND SURROUNDING AREAS</p>
-          <Button>CONTACT US</Button>
-          {/* <button class={styles.serviceBtn} type="button">
-            REQUEST SERVICE
-          </button> */}
         </div>
+        <Button style={{ '--height': '32px' }}>CONTACT US</Button>
       </div>
     </Show>
   );

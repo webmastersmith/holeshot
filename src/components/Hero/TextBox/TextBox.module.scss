@@ -5,11 +5,32 @@
   top: 100%;
   top: 10%;
   left: 10%;
-  // transform: scaleX(-1);
+  // z-index: 1;
+
+  & > a > button {
+    margin-top: 45px;
+  }
 }
 .textBox {
   text-shadow: 2px 2px 1px var(--my-green);
   color: var(--my-white);
+  position: relative; // needed for black background.
+  // z-index: 2;
+
+  p {
+    position: relative;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
+  }
 }
 .electrical {
   font-size: 80px;
@@ -35,23 +56,57 @@
 
 #flyIn {
   animation-name: fadeIn;
-  // animation-delay: 0;
+  animation-delay: 1.1s;
   animation-direction: normal;
   animation-duration: 2s;
-  // animation-fill-mode: none;
+  animation-fill-mode: both;
   animation-iteration-count: 1;
-  // animation-play-state: running;
   animation-timing-function: ease-in-out;
   backface-visibility: visible !important;
 }
 
+.shadow {
+  background-color: black;
+  position: absolute;
+  // top: 0;
+  // bottom: 0;
+  // left: 0;
+  // right: 0;
+  animation: upDown 2s;
+  animation-fill-mode: both;
+  opacity: 0.7;
+}
+
+@keyframes upDown {
+  0% {
+    top: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  50% {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  100% {
+    top: 0;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+  }
+}
 @keyframes fadeIn {
-  from {
+  0% {
     transform: rotate3d(1, 0, 0, -180deg) translateY(-100%) scale(0.7);
     opacity: 0;
   }
 
-  to {
+  50% {
+  }
+
+  100% {
     transform: rotate3d(1, 0, 0, 0deg) translateY(0) scale(1);
     opacity: 1;
   }

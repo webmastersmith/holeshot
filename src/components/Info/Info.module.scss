@@ -76,7 +76,9 @@
     color: var(--my-svg) !important;
     margin-bottom: 1rem;
     stroke: var(--my-black);
-    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+    filter: drop-shadow(3px 5px 2px rgb(0, 0, 0, 0.4));
+    transform: translatey(0px);
+    animation: float 6s ease-in-out infinite;
   }
 
   h1 {
@@ -87,5 +89,20 @@
   p {
     width: 80%;
     text-justify: auto;
+  }
+
+  @keyframes float {
+    0% {
+      filter: drop-shadow(2px 5px 0px rgba(0, 0, 0, 0.6));
+      transform: translatey(0px);
+    }
+    50% {
+      filter: drop-shadow(10px 7px 7px rgba(0, 0, 0, 0.3));
+      transform: translatey(-5px);
+    }
+    100% {
+      filter: drop-shadow(2px 5px 0px rgba(0, 0, 0, 0.6));
+      transform: translatey(0px);
+    }
   }
 }

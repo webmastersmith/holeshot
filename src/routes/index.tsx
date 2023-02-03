@@ -1,9 +1,11 @@
+import { lazy } from 'solid-js';
 import styles from './index.module.scss';
 import Hero from '~/components/Hero/Hero';
-import Electrical from '~/components/Electrical/Electrical';
-import Info from '~/components/Info/Info';
-import Testimonials from '~/components/Testimonials/Testimonials';
-import ContactForm from '~/components/ContactForm/ContactForm';
+
+const Info = lazy(() => import('~/components/Info/Info'));
+const Electrical = lazy(() => import('~/components/Electrical/Electrical'));
+const Testimonials = lazy(() => import('~/components/Testimonials/Testimonials'));
+const ContactForm = lazy(() => import('~/components/ContactForm/ContactForm'));
 
 export default function Home() {
   return (

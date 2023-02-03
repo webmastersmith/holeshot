@@ -1,11 +1,12 @@
 // @refresh reload
-import { Suspense } from 'solid-js';
+import { Suspense, lazy } from 'solid-js';
 import { Body, ErrorBoundary, FileRoutes, Head, Html, Link, Meta, Routes, Scripts, Title } from 'solid-start';
 import Nav from './components/Nav/Nav';
 import LinkBar from './components/Nav/LinkBar/LinkBar';
-import Footer from './components/Footer/Footer';
-import Placeholder from './components/Footer/Placeholder/Placeholder';
 import './root.css';
+
+const Footer = lazy(() => import('./components/Footer/Footer'));
+const Placeholder = lazy(() => import('./components/Footer/Placeholder/Placeholder'));
 
 export default function Root() {
   return (

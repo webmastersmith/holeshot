@@ -1,8 +1,6 @@
-import { lazy } from 'solid-js';
+import Background from './Background/Background';
+import Slider from './Slider/Slider';
 import styles from './Testimonials.module.scss';
-
-const Background = lazy(() => import('./Background/Background'));
-const Slider = lazy(() => import('./Slider/Slider'));
 
 export default function Testimonials() {
   return (

@@ -3,7 +3,7 @@
   --bg-color: var(--my-green);
   border: none;
   border: 1px solid black;
-  background: linear-gradient(180deg, hsla(102, 63%, 60%, 1) 0%, hsla(10, 10%, 10%, 1) 100%);
+  background: linear-gradient(180deg, hsla(102, 63%, 60%, 1) 0%, hsla(0, 0%, 20%, 1) 100%);
   color: var(--text-color);
   overflow: hidden;
   border-radius: 5px;
@@ -16,8 +16,11 @@
   display: inline-block;
   // box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5), 7px 7px 20px 0px rgba(0, 0, 0, 0.1),
   // 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
-  box-shadow: inset 2px 2px 2px 0px rgba(0, 0, 0, 0.5), 7px 7px 20px 0px rgba(255, 255, 255, 0.1),
-    4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  // box-shadow: inset 2px 2px 2px 0px rgba(0, 0, 0, 0.5), 7px 7px 20px 0px rgba(255, 255, 255, 0.1),
+  // 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 4px 4px 6px 0 rgba(0, 0, 0, 0.3), -4px -4px 6px 0 rgba(116, 125, 136, 0.2),
+    inset -4px -4px 6px 0 rgba(0, 0, 0, 0.2), inset 4px 4px 6px 0 rgba(255, 255, 255, 0.2);
+
   outline: none;
 }
 .button:hover {
@@ -37,8 +40,10 @@
   animation: shiny-btn1 3s ease-in-out infinite;
 }
 .button:active {
-  box-shadow: 4px 4px 6px 0 rgba(0, 0, 0, 0.3), -4px -4px 6px 0 rgba(116, 125, 136, 0.2),
-    inset -4px -4px 6px 0 rgba(0, 0, 0, 0.2), inset 4px 4px 6px 0 rgba(255, 255, 255, 0.2);
+  // box-shadow: 4px 4px 6px 0 rgba(0, 0, 0, 0.3), -4px -4px 6px 0 rgba(116, 125, 136, 0.2),
+  //   inset -4px -4px 6px 0 rgba(0, 0, 0, 0.2), inset 4px 4px 6px 0 rgba(255, 255, 255, 0.2);
+  box-shadow: inset 2px 2px 2px 0px rgba(0, 0, 0, 0.5), 7px 7px 20px 0px rgba(255, 255, 255, 0.1),
+    4px 4px 5px 0px rgba(0, 0, 0, 0.1);
 }
 
 @keyframes shiny-btn1 {
