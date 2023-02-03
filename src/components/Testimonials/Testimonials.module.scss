@@ -1,0 +1,25 @@
+.testimonials {
+  height: 1000px;
+  width: 100%;
+  background-color: var(--my-black, #000);
+  position: relative;
+  display: grid;
+  place-content: center;
+}
+.textBox {
+  position: relative;
+  z-index: 1;
+  color: var(--my-white, #fff);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+
+  h1 {
+    font-weight: bold;
+    font-size: 45px;
+  }
+  & > img {
+    margin-top: -3rem;
+  }
+}

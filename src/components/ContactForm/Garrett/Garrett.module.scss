@@ -1,0 +1,10 @@
+.garrett {
+  width: 100%;
+  max-width: 600px;
+  grid-area: garrett;
+  background-color: var(--my-white);
+
+  p {
+    max-width: 400px;
+  }
+}

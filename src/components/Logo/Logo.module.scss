@@ -1,0 +1,39 @@
+.logo {
+  --size: var(--height, 85px);
+  position: relative;
+  // outline: var(--my-outline);
+
+  img.holeShotLogo {
+    display: inline-block;
+    height: var(--size);
+    width: auto;
+  }
+
+  & > div {
+    float: right;
+    --text-shadow: 1px 1px 1px var(--my-green);
+    margin-top: calc(var(--size) * 0.235294); //20px
+    margin-left: calc(var(--size) * 0.04705882352); // 4px;
+    color: var(--my-black);
+    font-size: calc(var(--size) * 0.23529411764); //20px
+    line-height: calc(var(--size) * 0.2823529); // 24px
+    text-shadow: var(--text-shadow);
+    // outline: var(--my-outline);
+
+    p:first-of-type {
+      font-weight: bold;
+    }
+    p:last-of-type {
+      font-weight: bold;
+    }
+
+    img.bolt {
+      position: absolute;
+      top: calc(var(--size) * 0.1); // 6px;
+      right: calc(var(--size) * 0.3294117647); // 28px;
+      height: 85%;
+      width: auto;
+      z-index: -1;
+    }
+  }
+}

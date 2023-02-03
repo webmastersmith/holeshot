@@ -1,0 +1,73 @@
+.linkBar {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 2;
+
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-items: center;
+  align-items: center;
+
+  background-color: var(--my-black);
+  color: var(--my-white);
+  font-weight: bolder;
+
+  & > a:link,
+  & > a:any-link,
+  & > a:-webkit-any-link {
+    color: var(--link-color);
+  }
+  // a:visited {
+  //   // color: var(--link-color);
+  // }
+  a:hover {
+    color: var(--link-hover-color);
+  }
+  a:focus {
+    color: var(--link-hover-color);
+  }
+  a:active {
+    color: var(--link-hover-color);
+  }
+  a:link,
+  a:hover,
+  a:active,
+  a:visited,
+  a:focus {
+    text-decoration: none;
+  }
+  .active {
+    border-bottom: 2px solid var(--link-hover-color);
+    color: var(--link-hover-color) !important;
+  }
+  .inactive {
+    border-bottom: none;
+    color: var(--link-color);
+  }
+
+  .phone {
+    background-color: var(--my-green);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+
+    gap: 1rem;
+    img {
+      margin-right: 4px;
+    }
+    &:link,
+    &:any-link,
+    &:-webkit-any-link {
+      color: var(--my-black);
+    }
+
+    &:hover {
+      color: var(--my-white);
+    }
+  }
+}

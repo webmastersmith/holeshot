@@ -1,0 +1,206 @@
+.formComponent {
+  --radius: 5px;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+
+  grid-area: form;
+  z-index: 1;
+
+  background-color: var(--my-white);
+}
+.form {
+  display: grid;
+  gap: 1.5rem;
+  width: min(600px, 100%);
+
+  div {
+    label {
+      display: block;
+      font-weight: bold;
+      font-size: small;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      border-radius: var(--radius);
+      border: 2px solid #ccc;
+      box-shadow: var(--single-shadow);
+      padding: 5px;
+
+      // VALIDATION
+      // invalid
+      &:not(:placeholder-shown):invalid {
+        border-color: #ff0000;
+        color: #ff0000;
+        background-image: url('/svg/x.svg');
+        background-repeat: no-repeat;
+        background-position: 99% 50%;
+      }
+      &:not(:placeholder-shown):focus:invalid {
+        border-color: #ff0000;
+        color: #ff0000;
+        outline: none;
+      }
+
+      // valid
+      &:not(:placeholder-shown):valid {
+        border-color: #007500;
+        color: #000000;
+        background-image: url('/svg/check.svg');
+        background-repeat: no-repeat;
+        background-position: 99% 50%;
+      }
+      &:not(:placeholder-shown):focus:valid {
+        border-color: #007500;
+        color: #000000;
+        outline: none;
+      }
+
+      // error text below email
+      & + p {
+        margin-top: 4px;
+        margin-bottom: -19.5px;
+        display: flex;
+        gap: 6px;
+        font-size: small;
+        color: #ff0000;
+        opacity: 0;
+        svg {
+          margin-top: 4px;
+        }
+      }
+      &:not(:placeholder-shown):focus:invalid + p {
+        opacity: 1;
+      }
+      &:not(:placeholder-shown):invalid + p {
+        opacity: 1;
+      }
+    } // end input,textarea
+  } // end div
+
+  button {
+    border-radius: var(--radius);
+    box-shadow: var(--single-shadow);
+    border: 1px solid #000000;
+    background-color: var(--my-black);
+    color: var(--my-white);
+  }
+}
+
+// MODAL
+.green {
+  background-color: #007500;
+}
+// .yellow {
+//   background-color: #ffff00;
+// }
+.red {
+  background-color: #ff0000;
+}
+.modal {
+  width: 600px;
+  max-width: 80%;
+  height: 200px;
+  max-height: 100%;
+  color: #000000;
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  border-radius: 5px;
+
+  animation-name: show;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+
+  @keyframes show {
+    0% {
+      top: -10px;
+      opacity: 0;
+    }
+    100% {
+      top: 10px;
+      opacity: 1;
+    }
+  }
+
+  p {
+    font-size: large;
+    & > span {
+      &:first-child {
+        color: #000000;
+        font-weight: bold;
+      }
+      &:last-child {
+        font-style: italic;
+      }
+    }
+  }
+
+  button {
+    --size: 42px;
+    position: relative;
+    right: 0;
+    top: 5px;
+    left: 45%;
+    width: var(--size);
+    height: var(--size);
+    opacity: 0.7;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  button:hover {
+    opacity: 1;
+  }
+  svg {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+// PROGRESSBAR
+.progressBar {
+  overflow: hidden;
+  position: fixed;
+  top: -1px;
+  left: 0;
+  width: 0;
+  height: 6px;
+  // border: 1px solid #ccc;
+  border: none;
+  background-color: #0000ff;
+  z-index: 102;
+  animation-name: inc;
+  animation-fill-mode: both;
+  animation-timing-function: ease;
+  animation-duration: 5s;
+  z-index: 103;
+
+  @keyframes inc {
+    0% {
+      width: 0%;
+    }
+    25% {
+      width: 20%;
+    }
+    50% {
+      width: 75%;
+    }
+    75% {
+      width: 85%;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+}

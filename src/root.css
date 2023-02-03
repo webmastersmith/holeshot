@@ -1,0 +1,192 @@
+/* RESET */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+html,
+body {
+  min-height: 100%;
+  overflow: auto;
+  padding: 0;
+  margin: 0;
+  /* font-family: Optima, Arial, Helvetica, sans-serif; */
+  font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+  /* font-family: Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, sans-serif; */
+  background: var(--bg-color);
+  color: var(--font-color);
+}
+/* can break 3rd party css */
+/* * {
+  line-height: calc(1em + 0.5rem);
+} */
+body {
+  /* min-height: 100vh; */
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/* Fix default font-weight */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  font-weight: 400;
+}
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+/* Reset padding all ul, ol items*/
+ul,
+ol {
+  padding: 0;
+}
+/* Remove list styles on ul, ol elements, so screen readers will still treat items as list. */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+#root,
+#__next {
+  isolation: isolate;
+}
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* Bellow my custom addons*/
+/* color: var(--red, fallback) */
+
+:root {
+  --single-shadow: 0 6px 6px hsl(0deg 0% 0% / 0.3);
+  /* https://getcssscan.com/css-box-shadow-examples */
+  --shadow-1: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  /* --shadow-1: 0 2px 1px hsl(0deg 0% 0% / 0.4); */
+  --shadow-2: 0 6px 6px hsl(0deg 0% 0% / 0.3);
+  --shadow: 0 6px 6px hsl(0deg 0% 0% / 0.3);
+
+  --my-outline: 1px solid red;
+  --radius: 5px;
+  /* --my-green: #7ED957;
+  --my-black: #1a090d;
+  --my-white: #fcfcfc;
+  --my-blue: #256EFF;
+  --my-yellow: #FFA400; */
+
+  /* --my-black: #1c1c1c; */
+  /* --my-green: #00ff9d; */
+  /* --my-purple: #8b008b; */
+  /* --my-orange: #EC8B5E; */
+  /* --my-bg-dark: #161625; */
+  /* --my-font-dark: #e1e1ff; */
+  /* --my-white: #fffcf7; */
+  --my-blue: #03edff;
+  --my-yellow: #ffe500;
+  
+
+  /* my colors */
+  --my-black: #000000;
+  --my-white: #ffffff;
+  --my-green: #7ED957;
+  --my-purple: #8c2155;
+  --my-orange: #e55812;
+  --my-lighting: #e55812;
+  --my-red: #ea2b1f;
+
+  --link-color: var(--my-white);
+  --link-hover-color: var(--my-green);
+  --my-font-dark: #ffffff;
+  --bg-color: var(--my-white);
+  --my-bg-dark: var(--my-black);
+  --font-color: var(--my-black);
+  /* --bg-color: var(--my-black);
+  --font-color: var(--my-white); */
+  --my-svg: var(--my-green);
+
+  /* Custom settings */
+  --linkBar-offset: 2rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: var(--my-bg-dark);
+    --font-color:  var(--my-font-dark);
+  }
+}
+
+[data-theme="dark"] {
+  /* --primary-color: #9A97F3;
+  --secondary-color: #818cab;
+  --font-color: #e1e1ff;
+  --bg-color: #161625;
+  --heading-color: #818cab; */
+  --bg-color: var(--my-bg-dark);
+  --font-color:  var(--my-font-dark);
+}
+
+.inView {
+  animation: showMe 1s ease 0s 1 normal forwards;
+  animation-fill-mode: both;
+}
+@keyframes showMe {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* * {
+  outline: 1px solid red;
+} */

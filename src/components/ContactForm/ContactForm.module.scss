@@ -1,0 +1,30 @@
+.contactForm {
+  min-height: 100%;
+  display: grid;
+  padding: 12rem 1rem;
+  justify-content: center;
+  grid-template-columns: 1fr;
+  gap: 6rem;
+  grid-template-areas:
+    'garrett'
+    'form';
+  @media (min-width: 1000px) {
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'garrett form';
+  }
+
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    background-image: url('/blueprint.svg');
+    background-size: cover;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.07;
+  }
+}

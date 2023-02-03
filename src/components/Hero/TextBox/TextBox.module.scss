@@ -1,0 +1,58 @@
+// TEXT
+.textWrapper {
+  position: relative;
+  width: 80%;
+  top: 100%;
+  top: 10%;
+  left: 10%;
+  // transform: scaleX(-1);
+}
+.textBox {
+  text-shadow: 2px 2px 1px var(--my-green);
+  color: var(--my-white);
+}
+.electrical {
+  font-size: 80px;
+  letter-spacing: 10px;
+}
+.contractor {
+  font-size: 60px;
+  letter-spacing: 8px;
+}
+.area {
+  font-size: 40px;
+  letter-spacing: 6px;
+}
+.serviceBtn {
+  background-color: var(--my-black);
+  color: var(--my-white);
+  padding: 1rem;
+  border-radius: 5px;
+  width: 15rem;
+  margin-top: 2rem;
+  border: 2px solid black;
+}
+
+#flyIn {
+  animation-name: fadeIn;
+  // animation-delay: 0;
+  animation-direction: normal;
+  animation-duration: 2s;
+  // animation-fill-mode: none;
+  animation-iteration-count: 1;
+  // animation-play-state: running;
+  animation-timing-function: ease-in-out;
+  backface-visibility: visible !important;
+}
+
+@keyframes fadeIn {
+  from {
+    transform: rotate3d(1, 0, 0, -180deg) translateY(-100%) scale(0.7);
+    opacity: 0;
+  }
+
+  to {
+    transform: rotate3d(1, 0, 0, 0deg) translateY(0) scale(1);
+    opacity: 1;
+  }
+}
