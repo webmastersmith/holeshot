@@ -3,6 +3,8 @@ import { Suspense } from 'solid-js';
 import { Body, ErrorBoundary, FileRoutes, Head, Html, Link, Meta, Routes, Scripts, Title } from 'solid-start';
 import Nav from './components/Nav/Nav';
 import LinkBar from './components/Nav/LinkBar/LinkBar';
+import Footer from './components/Footer/Footer';
+import Placeholder from './components/Footer/Placeholder/Placeholder';
 import './root.css';
 
 export default function Root() {
@@ -43,6 +45,8 @@ export default function Root() {
             <Routes>
               <FileRoutes />
             </Routes>
+            <Placeholder />
+            <Footer />
           </ErrorBoundary>
         </Suspense>
         <Scripts />

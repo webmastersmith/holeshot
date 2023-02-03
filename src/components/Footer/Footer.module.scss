@@ -1,40 +1,15 @@
 .footer {
   display: grid;
-  height: 600px;
+  height: var(--footer-height);
   width: 100%;
-  position: relative;
 
-  // background-image: url('/electrical/commercial.jpg');
-  // background-attachment: fixed;
-  // z-index: -1;
+  position: fixed;
+  bottom: 0;
+  background: var(--my-black);
+  color: var(--my-white);
   & > div {
     width: 100%;
-    height: 600px;
-    // background-attachment: fixed;
-    // background-size: cover;
-    // will-change: transform;
-
-    // background-color: var(--my-black);
-    background: url('/electrical/commercial.jpg') no-repeat center center;
-    background-attachment: fixed;
-    background-size: cover;
-    height: 100%;
-    position: fixed;
-    height: 100%;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    // max-height: 600px;
-    // -webkit-backface-visibility: hidden;
-    // background-attachment: fixed;
-    // background-repeat: no-repeat;
-    // background-position: bottom;
-    // background-size: cover;
-    // min-height: 100%;
-
     color: var(--my-green);
-    // z-index: -10;
 
     // temp
     display: flex;

@@ -1,5 +1,5 @@
 .header {
-  --link-color: var(--my-orange);
+  --height: 100px;
   position: relative;
   z-index: 2;
 
@@ -8,17 +8,30 @@
   justify-items: center;
   align-items: center;
 
-  padding: 1rem;
+  padding: 1rem 2rem;
   width: 100%;
 
   background: var(--bg-color);
-  min-height: 100px;
+  min-height: var(--height);
 
-  .icons {
+  .masterElec {
+    justify-self: start;
     display: flex;
-    width: 100%;
-    gap: 2rem;
-    justify-content: center;
+    justify-content: start;
+    & > img {
+      height: calc(var(--height));
+      filter: drop-shadow(7px 5px 9px hsla(0, 0%, 0%, 0.6));
+    }
+    & > div {
+      margin-top: 16px;
+      margin-left: -44px;
+      z-index: 1;
+      & > p {
+        font-weight: bold;
+        font-size: 22px;
+        text-shadow: 1px 1px 1px var(--my-green);
+      }
+    }
   }
 
   :nth-child(2) {

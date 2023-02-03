@@ -1,5 +1,5 @@
 import { createServerAction$, json, redirect, ServerError } from 'solid-start/server';
-import { Show, For, createSignal, createEffect } from 'solid-js';
+import { Show, For, createEffect } from 'solid-js';
 import { z, ZodError } from 'zod';
 import { zfd } from 'zod-form-data';
 import { AiOutlineCloseCircle } from 'solid-icons/ai';
@@ -8,7 +8,6 @@ import styles from './FormComponent.module.scss';
 import { Portal } from 'solid-js/web';
 
 export default function FormComponent() {
-  const [view, setView] = createSignal(false);
   // server form logic.
   const [enrolling, { Form }] = createServerAction$(async (form: FormData, event) => {
     // const name = form.get('name') as string;
@@ -20,10 +19,10 @@ export default function FormComponent() {
       textarea: zfd.text(z.string().min(1).max(800)),
     });
 
-    const sleep = (ms: number) => new Promise((res) => setTimeout(res, ms));
+    // const sleep = (ms: number) => new Promise((res) => setTimeout(res, ms));
     try {
       const { name, email, textarea } = schema.parse(form);
-      await sleep(3000);
+      // await sleep(3000);
       console.log(name, email, textarea);
       // TODO
       // 1. send email!
@@ -31,7 +30,7 @@ export default function FormComponent() {
     } catch (e) {
       if (e instanceof ZodError) {
         const err = e.issues.map((er: any) => ({ field: er.path[0], msg: er.message }));
-        await sleep(3000);
+        // await sleep(3000);
         throw new ServerError(JSON.stringify(err), { status: 422 });
       }
     }
@@ -170,7 +169,6 @@ export default function FormComponent() {
           </div>
         </Portal>
       </Show>
-      <button onClick={() => setView(!view())}>show</button>
     </div>
   );
 }

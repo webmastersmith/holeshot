@@ -3,6 +3,8 @@
   max-width: 600px;
   grid-area: garrett;
   background-color: var(--my-white);
+  position: relative;
+  z-index: 1;
 
   p {
     max-width: 400px;

@@ -6,12 +6,9 @@ export default function Button(props: any) {
     // <button class={styles?.button || ''} style={props?.style || {}} type={props?.type || 'button'}>
     //   {props.children}
     // </button>
-    <A href="/#form">
-      <button class={styles.button} style={props?.style ?? {}} type={props?.type ?? 'button'}>
-        <div>
-          <span>{props.children}</span>
-          <span>Ready, Set, Go!</span>
-        </div>
+    <A href="/#contact">
+      <button class={styles.button} style={props?.style || {}} type={props?.type || 'button'}>
+        {props.children}
       </button>
     </A>
   );
