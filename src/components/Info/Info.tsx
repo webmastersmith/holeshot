@@ -1,11 +1,10 @@
-import { For } from 'solid-js';
-import { makeIntersectionObserver } from '@solid-primitives/intersection-observer';
-
+import { For, lazy } from 'solid-js';
 import { FaSolidComputer, FaSolidHandHoldingDollar } from 'solid-icons/fa';
 import { IoConstructSharp, IoDocumentText } from 'solid-icons/io';
 import { BiRegularLineChart } from 'solid-icons/bi';
-import { sun } from '~/assets/Svg/Svg';
 import styles from './Info.module.scss';
+import { makeIntersectionObserver } from '@solid-primitives/intersection-observer';
+import { sun } from '~/assets/Svg/Svg';
 
 export default function Info() {
   const data = [

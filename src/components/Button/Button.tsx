@@ -6,7 +6,7 @@ export default function Button(props: any) {
     // <button class={styles?.button || ''} style={props?.style || {}} type={props?.type || 'button'}>
     //   {props.children}
     // </button>
-    <A href="/#contact">
+    <A href="/#contact" style={{ 'text-decoration': 'none' }}>
       <button class={styles.button} style={props?.style || {}} type={props?.type || 'button'}>
         {props.children}
       </button>

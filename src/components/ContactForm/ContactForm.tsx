@@ -1,7 +1,6 @@
-import Button from '../Button/Button';
-import styles from './ContactForm.module.scss';
 import FormComponent from './FormComponent/FormComponent';
 import Garrett from './Garrett/Garrett';
+import styles from './ContactForm.module.scss';
 
 export default function ContactForm() {
   return (

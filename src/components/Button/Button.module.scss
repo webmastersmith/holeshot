@@ -14,14 +14,11 @@
   transition: all 0.3s ease;
   position: relative;
   display: inline-block;
-  // box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5), 7px 7px 20px 0px rgba(0, 0, 0, 0.1),
-  // 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
-  // box-shadow: inset 2px 2px 2px 0px rgba(0, 0, 0, 0.5), 7px 7px 20px 0px rgba(255, 255, 255, 0.1),
-  // 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
   box-shadow: 4px 4px 6px 0 rgba(0, 0, 0, 0.3), -4px -4px 6px 0 rgba(116, 125, 136, 0.2),
     inset -4px -4px 6px 0 rgba(0, 0, 0, 0.2), inset 4px 4px 6px 0 rgba(255, 255, 255, 0.2);
 
   outline: none;
+  text-decoration: none;
 }
 .button:hover {
   text-decoration: none;
@@ -40,8 +37,6 @@
   animation: shiny-btn1 3s ease-in-out infinite;
 }
 .button:active {
-  // box-shadow: 4px 4px 6px 0 rgba(0, 0, 0, 0.3), -4px -4px 6px 0 rgba(116, 125, 136, 0.2),
-  //   inset -4px -4px 6px 0 rgba(0, 0, 0, 0.2), inset 4px 4px 6px 0 rgba(255, 255, 255, 0.2);
   box-shadow: inset 2px 2px 2px 0px rgba(0, 0, 0, 0.5), 7px 7px 20px 0px rgba(255, 255, 255, 0.1),
     4px 4px 5px 0px rgba(0, 0, 0, 0.1);
 }
