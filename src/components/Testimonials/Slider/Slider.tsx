@@ -13,6 +13,12 @@ export default function Slider() {
       pagination: false,
       autoplay: true,
       interval: 5000,
+      classes: {
+        arrows: 'splide__arrows my-arrows',
+        arrow: 'splide__arrow my-arrow',
+        prev: 'splide__arrow--prev my-prev',
+        next: 'splide__arrow--next my-next',
+      },
     }).mount();
   });
 
@@ -44,7 +50,7 @@ export default function Slider() {
     },
   ];
   return (
-    <section class="splide" aria-label="Splide Basic HTML Example">
+    <div class="splide" aria-label="Splide Basic HTML Example">
       <div class="splide__track">
         <ul class="splide__list">
           <For each={data}>
@@ -58,6 +64,6 @@ export default function Slider() {
           </For>
         </ul>
       </div>
-    </section>
+    </div>
   );
 }

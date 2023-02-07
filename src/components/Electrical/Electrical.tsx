@@ -25,21 +25,25 @@ export default function Electrical() {
   );
   return (
     <section class={styles.electrical}>
-      <h1 use:intersectionObserver>Professional Craftsmanship</h1>
+      <img src="/electrical/commercial.jpg" alt="image of electrical conduit" />
 
-      <ul use:intersectionObserver>
-        <For each={images}>
-          {(image) => {
-            return (
-              <li>
-                <img src={`/electrical/${image}`} alt={`${image.replace(/\.png|\.jpg/, '')} logo`} />
-              </li>
-            );
-          }}
-        </For>
-      </ul>
+      <div class={styles.textbox}>
+        <h1 use:intersectionObserver>Professional Craftsmanship</h1>
 
-      <Button style={{ '--height': '32px' }}>LET'S CONNECT</Button>
+        <ul use:intersectionObserver>
+          <For each={images}>
+            {(image) => {
+              return (
+                <li>
+                  <img src={`/electrical/${image}`} alt={`${image.replace(/\.png|\.jpg/, '')} logo`} />
+                </li>
+              );
+            }}
+          </For>
+        </ul>
+
+        <Button style={{ '--height': '32px' }}>LET'S CONNECT</Button>
+      </div>
     </section>
   );
 }

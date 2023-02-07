@@ -1,10 +1,16 @@
+@use '../Nav.module' as v;
+
 .linkBar {
   position: sticky;
   top: 0;
   z-index: 2;
 
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+
+  grid-template-columns: repeat(4, 1fr);
+  @media (min-width: v.$tablet) {
+    grid-template-columns: repeat(5, 1fr);
+  }
   justify-items: center;
   align-items: center;
 
@@ -46,12 +52,16 @@
   }
 
   .phone {
+    display: none;
+    @media (min-width: v.$tablet) {
+      display: flex;
+    }
+    justify-content: center;
+    align-items: center;
+
     background-color: var(--my-green);
     height: 100%;
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
 

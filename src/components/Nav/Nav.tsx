@@ -11,6 +11,7 @@ export default function Nav() {
         <div class={styles.text}>
           <p>MASTER ELECTRICIAN</p>
           <p>TECL #37447</p>
+          <p class={styles.phone}>(903) 504-4028</p>
         </div>
       </div>
 

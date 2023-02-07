@@ -105,6 +105,10 @@ h6 {
   --shadow-1: 0 2px 1px hsl(0deg 0% 0% / 0.4);
   --shadow-2: 0 6px 6px hsl(0deg 0% 0% / 0.3);
   --shadow: 0 6px 6px hsl(0deg 0% 0% / 0.3);
+  /* make text stand out */
+  --text-shadow-1: 0px 0px 10px black;
+  --text-shadow-2: 0.07em 0 black, 0 0.07em black, -0.07em 0 black, 0 -0.07em black;
+  --text-shadow-3: 0.05em 0 black, 0 0.05em black, -0.05em 0 black, 0 -0.05em black, -0.05em -0.05em black, -0.05em 0.05em black, 0.05em -0.05em black, 0.05em 0.05em black;
   --footer-height: 600px;
 
   --my-outline: 1px solid red;
@@ -135,6 +139,8 @@ h6 {
   --my-orange: #e55812;
   --my-lighting: #e55812;
   --my-red: #ea2b1f;
+  --my-blue: #2467d0;
+  /* --my-blue: #002164; */
 
   --link-color: var(--my-white);
   --link-hover-color: var(--my-green);
@@ -167,20 +173,6 @@ h6 {
   --font-color:  var(--my-font-dark);
 }
 
-.inView {
-  animation: showMe 1s ease 0s 1 normal forwards;
-  animation-fill-mode: both;
-}
-@keyframes showMe {
-  from {
-    opacity: 0;
-    transform: translateY(60px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
 /* * {
   outline: 1px solid red;

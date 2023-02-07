@@ -1,5 +1,6 @@
 // TEXT
 .textWrapper {
+  grid-area: a;
   position: relative;
   width: 80%;
   top: 100%;
@@ -12,7 +13,7 @@
   }
 }
 .textBox {
-  text-shadow: 2px 2px 1px var(--my-green);
+  text-shadow: 2px 2px 1px var(--my-black);
   color: var(--my-white);
   position: relative; // needed for black background.
   // z-index: 2;
@@ -25,6 +26,9 @@
     content: '';
     position: absolute;
     background-color: rgba(0, 0, 0, 0.7);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+    border-radius: var(--radius);
+
     top: 0;
     bottom: 0;
     left: 0;
@@ -33,15 +37,15 @@
   }
 }
 .electrical {
-  font-size: 80px;
+  font-size: 7vw;
   letter-spacing: 10px;
 }
 .contractor {
-  font-size: 60px;
+  font-size: 5vw;
   letter-spacing: 8px;
 }
 .area {
-  font-size: 40px;
+  font-size: 3vw;
   letter-spacing: 6px;
 }
 .serviceBtn {
@@ -68,10 +72,6 @@
 .shadow {
   background-color: black;
   position: absolute;
-  // top: 0;
-  // bottom: 0;
-  // left: 0;
-  // right: 0;
   animation: upDown 2s;
   animation-fill-mode: both;
   opacity: 0.7;

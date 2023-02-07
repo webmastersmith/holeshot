@@ -1,19 +1,45 @@
+$height: 1000px;
 .testimonials {
-  height: 100vh;
+  display: grid;
+  place-items: center;
+  grid-template-columns: 100%;
+  grid-template-rows: minmax($height, 100vh);
+  grid-template-areas: 'a';
   width: 100%;
   background-color: var(--my-black, #000);
   position: relative;
-  display: grid;
-  place-content: center;
+
+  & > img {
+    grid-area: a;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  & > .shadow {
+    grid-area: a;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
+  }
 }
+
 .textBox {
-  position: relative;
-  z-index: 1;
-  color: var(--my-white, #fff);
+  grid-area: a;
+
   display: flex;
   flex-direction: column;
+  width: 100%;
+  justify-content: center;
   align-items: center;
   gap: 4rem;
+  @media (max-height: $height) {
+    gap: 2rem;
+  }
+
+  position: relative;
+  max-width: 800px;
+  color: var(--my-white, #fff);
 
   h1 {
     font-weight: bold;
@@ -21,5 +47,8 @@
   }
   & > img {
     margin-top: -3rem;
+    @media (max-height: $height) {
+      margin-top: -1rem;
+    }
   }
 }

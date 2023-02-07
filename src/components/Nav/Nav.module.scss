@@ -1,10 +1,19 @@
+$tablet: 912px;
+$phone: 630px;
+
 .header {
   --height: 100px;
   position: relative;
   z-index: 2;
 
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr;
+  @media (min-width: $phone) and (max-width: $tablet) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (min-width: ($tablet + 1px)) {
+    grid-template-columns: repeat(3, 1fr);
+  }
   justify-items: center;
   align-items: center;
 
@@ -27,8 +36,11 @@
   }
 
   .masterElec {
-    justify-self: start;
-    display: flex;
+    // justify-self: start;
+    display: none;
+    @media (min-width: $phone) {
+      display: flex;
+    }
     justify-content: start;
     & > img {
       height: calc(var(--height));
@@ -37,32 +49,43 @@
     & > div {
       margin-top: 16px;
       margin-left: -44px;
+      position: relative;
       z-index: 1;
       & > p {
         font-weight: bold;
         font-size: 22px;
         text-shadow: 1px 1px 1px var(--my-green);
       }
+      & > .phone {
+        display: none;
+        @media (max-width: $tablet) {
+          display: block;
+        }
+        position: absolute;
+        bottom: -7px;
+        right: 25px;
+      }
     }
   }
 
-  :nth-child(2) {
-    // justify-self: center;
-  }
   .phoneNumber {
     --size: 32px;
-    display: flex;
-    // outline: var(--my-outline);
-    font-size: var(--size);
-    font-weight: bold;
-    justify-self: end;
-
-    svg {
-      margin-top: calc(var(--size) * 0.325);
-      margin-right: calc(var(--size) * 0.325);
-      color: var(--my-svg) !important;
-      stroke: var(--my-black);
-      stroke-width: 35px;
+    display: none;
+    @media (min-width: $tablet) {
+      display: flex;
     }
+
+    // outline: var(--my-outline);
+    // font-size: var(--size);
+    // font-weight: bold;
+    // justify-self: end;
+
+    // svg {
+    //   margin-top: calc(var(--size) * 0.325);
+    //   margin-right: calc(var(--size) * 0.325);
+    //   color: var(--my-svg) !important;
+    //   stroke: var(--my-black);
+    //   stroke-width: 35px;
+    // }
   }
 }
