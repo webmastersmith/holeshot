@@ -1,9 +1,9 @@
-type ImageObj = {
+export type ImageObj = {
   img: any;
   sizes: string;
   media: string;
 };
-type defaultImg = {
+export type defaultImg = {
   placeholder: string;
   width: number;
   height: number;
@@ -14,7 +14,12 @@ type ImageProps = {
   w: number;
 };
 // Single image for 'Resolution Switching'
-export function Pic(img: ImageObj, defaultImg: defaultImg, styles: string = '') {
+export function ResolutionSwitching(
+  el: HTMLElement,
+  img: ImageObj,
+  defaultImg: defaultImg,
+  styles: string = ''
+) {
   const { placeholder, width, height, alt } = defaultImg;
 
   // loop each image object
@@ -27,11 +32,11 @@ export function Pic(img: ImageObj, defaultImg: defaultImg, styles: string = '') 
     )
     .join('');
 
-  return `<picture>${s}<img src="${placeholder}" width="${width}" height="${height}" alt="${alt}" class="${styles}" /></picture>`;
+  return `${s}<img src="${placeholder}" width="${width}" height="${height}" alt="${alt}" class="${styles}" />`;
 }
 
 // multiple images for ArtDirection or types
-export function artDirection(arr: ImageObj[], defaultImg: defaultImg, styles: string = '') {
+export function artDirection(el: HTMLElement, arr: ImageObj[], defaultImg: defaultImg, styles: string = '') {
   const { placeholder, width, height, alt } = defaultImg;
 
   // loop each image object
@@ -49,5 +54,5 @@ export function artDirection(arr: ImageObj[], defaultImg: defaultImg, styles: st
     })
     .join('');
 
-  return `<picture>${s}<img src="${placeholder}" width="${width}" height="${height}" alt="${alt}" class="${styles}" /></picture>`;
+  return `${s}<img src="${placeholder}" width="${width}" height="${height}" alt="${alt}" class="${styles}" />`;
 }
