@@ -1,9 +1,11 @@
-import { For } from 'solid-js';
-import { makeIntersectionObserver } from '@solid-primitives/intersection-observer';
+import { For, Show } from 'solid-js';
+import { makeIntersectionObserver, createVisibilityObserver } from '@solid-primitives/intersection-observer';
 import Button from '../Button/Button';
 import styles from './Electrical.module.scss';
 
 export default function Electrical() {
+  let el: HTMLDivElement | undefined;
+
   const images = ['agc.png', 'asa.jpg', 'sachamber.png', 'neca.jpg', 'bicsi.png'];
   const {
     add: intersectionObserver,
@@ -17,15 +19,22 @@ export default function Electrical() {
       entries.forEach((el) => {
         if (el.isIntersecting) {
           el.target.classList.add(styles.showImg);
-          // remove(el.target); // remove observer or will get called again when in viewport.
+          remove(el.target); // remove observer or will get called again when in viewport.
         }
       });
     },
     { rootMargin: '-150px' } // delay intersection by 150px.
   );
+  const useVisibilityObserver = createVisibilityObserver({ rootMargin: '700px' });
+  const visible = useVisibilityObserver(() => el);
+
+  //
   return (
-    <section class={styles.electrical}>
-      <img src="/electrical/commercial.jpg" alt="image of electrical conduit" />
+    //@ts-ignore
+    <section class={styles.electrical} ref={el}>
+      <Show when={visible()}>
+        <img src="/electrical/commercial.jpg" alt="image of electrical conduit" loading="eager" />
+      </Show>
 
       <div class={styles.textbox}>
         <h1 use:intersectionObserver>Professional Craftsmanship</h1>

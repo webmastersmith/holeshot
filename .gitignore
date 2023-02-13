@@ -26,3 +26,10 @@ Thumbs.db
 package-lock.json
 .env*
 tempDist
+
+*.jpg
+*.avif
+*.webp
+*.gif
+*.svg
+*.png

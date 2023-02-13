@@ -42,9 +42,10 @@ $phone: 630px;
       display: flex;
     }
     justify-content: start;
-    & > img {
+    & > picture {
       height: calc(var(--height));
-      filter: drop-shadow(7px 5px 9px hsla(0, 0%, 0%, 0.6));
+      // filter: drop-shadow(7px 5px 9px hsla(0, 0%, 0%, 0.6));
+      width: auto;
     }
     & > div {
       margin-top: 16px;
