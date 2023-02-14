@@ -1,10 +1,13 @@
+import { lazy } from 'solid-js';
 import Slider from './Slider/Slider';
 import styles from './Testimonials.module.scss';
+
+const TestimonialImage = lazy(() => import('./TestimonialImage/TestimonialImage'));
 
 export default function Testimonials() {
   return (
     <section class={styles.testimonials}>
-      <img src="/testimonials/home.jpeg" alt="house background" />
+      <TestimonialImage />
 
       <div class={styles.shadow}></div>
 

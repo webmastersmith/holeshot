@@ -17,11 +17,11 @@
     color: var(--my-white);
     gap: 4rem;
 
-    img {
+    & img {
       border-radius: 50%;
       width: 150px;
     }
-    p {
+    & p {
       width: 90%;
       @media (min-width: 600px) {
         width: 60%;
@@ -41,7 +41,7 @@
         z-index: -1;
       }
     }
-    h2 {
+    & h2 {
       font-family: 'Brush Script MT';
       font-size: 50px;
     }

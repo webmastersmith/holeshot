@@ -9,12 +9,6 @@ $height: 1000px;
   background-color: var(--my-black, #000);
   position: relative;
 
-  & > img {
-    grid-area: a;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-  }
   & > .shadow {
     grid-area: a;
     height: 100%;

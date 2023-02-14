@@ -1,7 +1,8 @@
-import { For, Show } from 'solid-js';
+import { For, Show, lazy } from 'solid-js';
 import { makeIntersectionObserver, createVisibilityObserver } from '@solid-primitives/intersection-observer';
 import Button from '../Button/Button';
 import styles from './Electrical.module.scss';
+import ElectricalImage from './ElectricalImage/ElectricalImage';
 
 export default function Electrical() {
   let el: HTMLDivElement | undefined;
@@ -33,7 +34,8 @@ export default function Electrical() {
     //@ts-ignore
     <section class={styles.electrical} ref={el}>
       <Show when={visible()}>
-        <img src="/electrical/commercial.jpg" alt="image of electrical conduit" loading="eager" />
+        {/* <img src="/electrical/commercial.jpg" alt="image of electrical conduit" loading="eager" /> */}
+        <ElectricalImage />
       </Show>
 
       <div class={styles.textbox}>
@@ -44,7 +46,11 @@ export default function Electrical() {
             {(image) => {
               return (
                 <li>
-                  <img src={`/electrical/${image}`} alt={`${image.replace(/\.png|\.jpg/, '')} logo`} />
+                  <img
+                    src={`/electrical/${image}`}
+                    alt={`${image.replace(/\.png|\.jpg/, '')} logo`}
+                    loading="lazy"
+                  />
                 </li>
               );
             }}
