@@ -38,7 +38,7 @@ export default function Slider() {
     {
       img: Person2,
       text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis mollitia fugiat, culpa at eius esse pariatur quo nemo aliquam, impedit doloribus autem consequuntur possimus maxime tempore enim, sint ipsa est!',
-      name: 'Cindy B. Spiegel',
+      name: 'Harold M. Dodson',
     },
     {
       img: Person3,
@@ -48,7 +48,7 @@ export default function Slider() {
     {
       img: Person4,
       text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque incidunt consequatur porro minima et totam aliquam, officiis aspernatur cumque distinctio numquam laudantium accusantium tempora aperiam doloremque possimus nihil laborum. Consequatur.',
-      name: 'Harold M. Dodson',
+      name: 'Cindy B. Spiegel',
     },
     {
       img: Person5,

@@ -1,5 +1,21 @@
 import createImages from 'solid-image';
 
+// TESTIMONIAL IMAGES
+// Fancy Trim
+// createImages([
+//   [
+//     'public/testimonials/fancyTrim.png',
+//     'w=170;340',
+//     'f=avif;webp;png',
+//     'fallbackWidth=170',
+//     'fallbackFormat=png',
+//     'alt=Image of fancy trim',
+//     'sizes=170px',
+//     'c=fancyTrim',
+//     'enlarge=true',
+//   ],
+// ]);
+
 // Testimonial Person
 // createImages([
 //   [
@@ -14,58 +30,58 @@ import createImages from 'solid-image';
 //     'enlarge=true',
 //   ],
 // ]);
-createImages([
-  [
-    'public/testimonials/image2.jpg',
-    'w=150;300',
-    'f=jpg',
-    'fallbackWidth=150',
-    'fallbackFormat=jpg',
-    'alt=Image of person leaving a review',
-    'sizes=150px',
-    'c=personImage',
-    'enlarge=true',
-  ],
-]);
-createImages([
-  [
-    'public/testimonials/image3.jpg',
-    'w=150;300',
-    'f=jpg',
-    'fallbackWidth=150',
-    'fallbackFormat=jpg',
-    'alt=Image of person leaving a review',
-    'sizes=150px',
-    'c=personImage',
-    'enlarge=true',
-  ],
-]);
-createImages([
-  [
-    'public/testimonials/image4.jpg',
-    'w=150;300',
-    'f=jpg',
-    'fallbackWidth=150',
-    'fallbackFormat=jpg',
-    'alt=Image of person leaving a review',
-    'sizes=150px',
-    'c=personImage',
-    'enlarge=true',
-  ],
-]);
-createImages([
-  [
-    'public/testimonials/image5.jpg',
-    'w=150;300',
-    'f=jpg',
-    'fallbackWidth=150',
-    'fallbackFormat=jpg',
-    'alt=Image of person leaving a review',
-    'sizes=150px',
-    'c=personImage',
-    'enlarge=true',
-  ],
-]);
+// createImages([
+//   [
+//     'public/testimonials/image2.jpg',
+//     'w=150;300',
+//     'f=jpg',
+//     'fallbackWidth=150',
+//     'fallbackFormat=jpg',
+//     'alt=Image of person leaving a review',
+//     'sizes=150px',
+//     'c=personImage',
+//     'enlarge=true',
+//   ],
+// ]);
+// createImages([
+//   [
+//     'public/testimonials/image3.jpg',
+//     'w=150;300',
+//     'f=jpg',
+//     'fallbackWidth=150',
+//     'fallbackFormat=jpg',
+//     'alt=Image of person leaving a review',
+//     'sizes=150px',
+//     'c=personImage',
+//     'enlarge=true',
+//   ],
+// ]);
+// createImages([
+//   [
+//     'public/testimonials/image4.jpg',
+//     'w=150;300',
+//     'f=jpg',
+//     'fallbackWidth=150',
+//     'fallbackFormat=jpg',
+//     'alt=Image of person leaving a review',
+//     'sizes=150px',
+//     'c=personImage',
+//     'enlarge=true',
+//   ],
+// ]);
+// createImages([
+//   [
+//     'public/testimonials/image5.jpg',
+//     'w=150;300',
+//     'f=jpg',
+//     'fallbackWidth=150',
+//     'fallbackFormat=jpg',
+//     'alt=Image of person leaving a review',
+//     'sizes=150px',
+//     'c=personImage',
+//     'enlarge=true',
+//   ],
+// ]);
 
 // Testimonial background image
 // createImages([
@@ -113,6 +129,76 @@ createImages([
 //   ],
 // ]);
 
+// ELECTRICAL IMAGES
+// Members
+// createImages([
+//   [
+//     'public/electrical/agc.png',
+//     'w=100;200;300',
+//     'f=avif;webp;png',
+//     'fallbackWidth=100',
+//     'fallbackFormat=png',
+//     'alt=Image of agc membership',
+//     'sizes=100px',
+//     'c=agcImage',
+//     'enlarge=true',
+//   ],
+// ]);
+
+createImages([
+  [
+    'public/electrical/neca.jpg',
+    'w=210;420',
+    'f=avif;webp;jpg',
+    'fallbackWidth=210',
+    'fallbackFormat=jpg',
+    'alt=Image of sachamber membership',
+    'sizes=210px',
+    'c=necaImage',
+    'enlarge=true',
+  ],
+]);
+// createImages([
+//   [
+//     'public/electrical/sachamber.png',
+//     'w=144;288',
+//     'f=avif;webp;png',
+//     'fallbackWidth=144',
+//     'fallbackFormat=png',
+//     'alt=Image of sachamber membership',
+//     'sizes=144px',
+//     'c=sachamberImage',
+//     'enlarge=true',
+//   ],
+// ]);
+// createImages([
+//   [
+//     'public/electrical/asa.jpg',
+//     'w=240;480',
+//     'f=avif;webp;jpg',
+//     'fallbackWidth=240',
+//     'fallbackFormat=jpg',
+//     'alt=Image of asa membership',
+//     'sizes=240px',
+//     'c=asaImage',
+//     'enlarge=true',
+//   ],
+// ]);
+// createImages([
+//   [
+//     'public/electrical/bicsi.png',
+//     'w=100;200;300',
+//     'f=avif;webp;png',
+//     'fallbackWidth=100',
+//     'fallbackFormat=png',
+//     'alt=Image of bicsi membership',
+//     'sizes=100px',
+//     'c=bicsiImage',
+//     'enlarge=true',
+//   ],
+// ]);
+
+// Background Image
 // createImages([
 //   [
 //     'public/electrical/commercial.jpg',
@@ -158,7 +244,7 @@ createImages([
 //   ],
 // ]);
 
-// hero image
+// HERO IMAGE
 // createImages([
 //   [
 //     'public/hero/hero-full.jpg',
@@ -188,6 +274,7 @@ createImages([
 //   ],
 // ]);
 
+// HEADER NAV IMAGES
 // texas image
 // createImages(
 //   'header/texasFlag.png?w=100;200;300&f=avif;webp;png&fallbackWidth=100&alt=Image of Texas Flag&sizes=100px&c=texasImage&sharpen=true'

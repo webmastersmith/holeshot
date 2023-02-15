@@ -4,10 +4,17 @@ import Button from '../Button/Button';
 import styles from './Electrical.module.scss';
 import ElectricalImage from './ElectricalImage/ElectricalImage';
 
+const Agc = lazy(() => import('./AgcImage/AgcImage'));
+const Asa = lazy(() => import('./AsaImage/AsaImage'));
+const Sachamber = lazy(() => import('./SachamberImage/SachamberImage'));
+const Neca = lazy(() => import('./NecaImage/NecaImage'));
+const Bicsi = lazy(() => import('./BicsiImage/BicsiImage'));
+
 export default function Electrical() {
   let el: HTMLDivElement | undefined;
 
-  const images = ['agc.png', 'asa.jpg', 'sachamber.png', 'neca.jpg', 'bicsi.png'];
+  // const images = ['agc.png', 'asa.jpg', 'sachamber.png', 'neca.jpg', 'bicsi.png'];
+  const images = [Agc, Asa, Sachamber, Neca, Bicsi];
   const {
     add: intersectionObserver,
     remove,
@@ -43,14 +50,15 @@ export default function Electrical() {
 
         <ul use:intersectionObserver>
           <For each={images}>
-            {(image) => {
+            {(Image) => {
               return (
                 <li>
-                  <img
-                    src={`/electrical/${image}`}
-                    alt={`${image.replace(/\.png|\.jpg/, '')} logo`}
+                  {/* <img
+                    src={`/electrical/${Image}`}
+                    alt={`${Image.replace(/\.png|\.jpg/, '')} logo`}
                     loading="lazy"
-                  />
+                  /> */}
+                  <Image />
                 </li>
               );
             }}

@@ -1,0 +1,9 @@
+@use '../Testimonials.module.scss' as v;
+
+.fancyTrim {
+  max-width: 170px;
+  margin-top: -1.75rem;
+  @media (max-height: v.$height) {
+    margin-top: -1rem;
+  }
+}
