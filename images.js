@@ -112,7 +112,6 @@ import createImages from 'solid-image';
 //     'sharpen=true',
 //     'enlarge=true',
 //   ],
-
 //   [
 //     'public/testimonials/home.jpeg',
 //     'w=900;1200;1800;2500',
@@ -144,20 +143,19 @@ import createImages from 'solid-image';
 //     'enlarge=true',
 //   ],
 // ]);
-
-createImages([
-  [
-    'public/electrical/neca.jpg',
-    'w=210;420',
-    'f=avif;webp;jpg',
-    'fallbackWidth=210',
-    'fallbackFormat=jpg',
-    'alt=Image of sachamber membership',
-    'sizes=210px',
-    'c=necaImage',
-    'enlarge=true',
-  ],
-]);
+// createImages([
+//   [
+//     'public/electrical/neca.jpg',
+//     'w=210;420',
+//     'f=avif;webp;jpg',
+//     'fallbackWidth=210',
+//     'fallbackFormat=jpg',
+//     'alt=Image of sachamber membership',
+//     'sizes=210px',
+//     'c=necaImage',
+//     'enlarge=true',
+//   ],
+// ]);
 // createImages([
 //   [
 //     'public/electrical/sachamber.png',

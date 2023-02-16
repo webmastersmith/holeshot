@@ -13,7 +13,6 @@ const Bicsi = lazy(() => import('./BicsiImage/BicsiImage'));
 export default function Electrical() {
   let el: HTMLDivElement | undefined;
 
-  // const images = ['agc.png', 'asa.jpg', 'sachamber.png', 'neca.jpg', 'bicsi.png'];
   const images = [Agc, Asa, Sachamber, Neca, Bicsi];
   const {
     add: intersectionObserver,
@@ -38,12 +37,8 @@ export default function Electrical() {
 
   //
   return (
-    //@ts-ignore
     <section class={styles.electrical} ref={el}>
-      <Show when={visible()}>
-        {/* <img src="/electrical/commercial.jpg" alt="image of electrical conduit" loading="eager" /> */}
-        <ElectricalImage />
-      </Show>
+      <ElectricalImage display={visible() ? 'block' : 'none'} />
 
       <div class={styles.textbox}>
         <h1 use:intersectionObserver>Professional Craftsmanship</h1>
@@ -53,11 +48,6 @@ export default function Electrical() {
             {(Image) => {
               return (
                 <li>
-                  {/* <img
-                    src={`/electrical/${Image}`}
-                    alt={`${Image.replace(/\.png|\.jpg/, '')} logo`}
-                    loading="lazy"
-                  /> */}
                   <Image />
                 </li>
               );

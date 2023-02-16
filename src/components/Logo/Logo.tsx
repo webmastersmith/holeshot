@@ -1,20 +1,8 @@
 import styles from './Logo.module.scss';
 
-// await createImages([
-//   [
-//     'public/header/logo/bolt.gif',
-//     'w=25;55',
-//     'f=gif:4',
-//     'animated=true',
-//     'sizes=62px',
-//     'c=bolt',
-//     'alt=lighting bolt image',
-//   ],
-// ]);
-
 export default function Logo(props: any) {
   return (
-    <div class={styles.logo} style={props?.style ?? ''}>
+    <div class={`${styles.logo} ${props?.display ?? ''}`} style={props?.style ?? ''}>
       <img
         src="/header/logo/logo.svg"
         alt="HoleShot electric logo"

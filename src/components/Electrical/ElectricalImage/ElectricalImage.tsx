@@ -1,8 +1,8 @@
 import styles from './ElectricalImage.module.scss';
 
-export default function ElectricalImage() {
+export default function ElectricalImage(props: any) {
   return (
-    <picture class={styles.electricalImage}>
+    <picture class={styles.electricalImage} style={{ display: props.display }}>
       <source
         type="image/avif"
         srcset="/electrical/commercial/commercial_9-16_600x1067.avif 600w, /electrical/commercial/commercial_9-16_700x1244.avif 700w, /electrical/commercial/commercial_9-16_800x1422.avif 800w, /electrical/commercial/commercial_9-16_1200x2133.avif 1200w, /electrical/commercial/commercial_9-16_1500x2667.avif 1500w"

@@ -2,17 +2,38 @@
   display: grid;
   height: var(--footer-height);
   width: 100%;
+  border: 2px solid var(--my-black);
 
   position: fixed;
   bottom: 0;
   background: var(--my-black);
   color: var(--my-white);
-  & > div {
-    width: 100%;
-    color: var(--my-green);
 
-    // temp
-    display: flex;
-    align-items: end;
+  & .footerLogo {
+    position: relative;
+    width: fit-content;
+    height: 100%;
+    padding: 2rem;
+    background-color: var(--my-white);
+
+    & .logo {
+      // position: absolute;
+      // top: 47%;
+      // left: 54%;
+      // transform: translate(-50%, -50%);
+      // filter: drop-shadow(0 6px 6px rgba(255, 255, 255, 0.3));
+    }
+
+    & .splat {
+    }
   }
+
+  // & > div {
+  //   width: 100%;
+  //   color: var(--my-green);
+
+  //   // temp
+  //   display: flex;
+  //   align-items: end;
+  // }
 }
