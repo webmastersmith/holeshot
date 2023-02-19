@@ -9,13 +9,14 @@
   grid-template-areas:
     'garrett'
     'form';
-  @media (min-width: 1000px) {
-    gap: 1rem;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: 'garrett form';
-  }
+  // @media (min-width: 1000px) {
+  //   gap: 1rem;
+  //   grid-template-columns: 1fr 1fr;
+  //   grid-template-areas: 'garrett form';
+  // }
 
   position: relative;
+  z-index: 1;
   background-color: var(--my-white);
 
   &::before {

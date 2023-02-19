@@ -1,39 +1,132 @@
 .footer {
+  $tablet: 800px;
+  $phone: 630px;
+  $lgPhone: 740px;
   display: grid;
-  height: var(--footer-height);
-  width: 100%;
-  border: 2px solid var(--my-black);
+  grid-template-rows: var(--footer-height);
+
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-areas: 'a';
+
+  @media (min-width: $phone) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 'a b';
+  }
+  @media (min-width: $lgPhone) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 'a b c';
+  }
+  @media (min-width: $tablet) {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 'a b c d';
+  }
+
+  min-width: 100%;
+  justify-items: center;
 
   position: fixed;
   bottom: 0;
   background: var(--my-black);
-  color: var(--my-white);
+  color: var(--my-green);
 
-  & .footerLogo {
-    position: relative;
-    width: fit-content;
-    height: 100%;
-    padding: 2rem;
-    background-color: var(--my-white);
+  // start here!
+  & > div {
+    text-align: center;
+    margin-top: 2rem;
+  }
 
-    & .logo {
-      // position: absolute;
-      // top: 47%;
-      // left: 54%;
-      // transform: translate(-50%, -50%);
-      // filter: drop-shadow(0 6px 6px rgba(255, 255, 255, 0.3));
+  & h1,
+  h2 {
+    color: var(--my-white);
+  }
+  & p {
+    padding: 0.5rem 0;
+  }
+
+  // HOLESHOT
+  & .holeshot {
+    grid-area: a;
+    padding-left: 1rem;
+
+    & .whiteLogo {
+      --size: 100px;
+      width: var(--size);
+      height: var(--size);
+      margin: 2rem;
+      display: inline-block;
+      text-align: center;
+      margin: 1rem 0;
     }
 
-    & .splat {
+    & a {
+      text-decoration: none;
+      color: var(--my-white);
+      &:hover {
+        color: var(--my-green);
+      }
+    }
+
+    & > p:nth-of-type(1) {
+      font-size: 1.5rem;
+    }
+    // phone number
+    & > p:nth-of-type(2) {
+      & > a {
+        // color: var(--my-white);
+      }
+    }
+    & > p:nth-of-type(4) {
+      padding-bottom: 0;
+    }
+    & > p:nth-of-type(5) {
+      padding: 0;
     }
   }
 
-  // & > div {
-  //   width: 100%;
-  //   color: var(--my-green);
+  // SERVICES
+  & .services {
+    grid-area: b;
+    display: none;
+    @media (min-width: $phone) {
+      display: block;
+    }
+  }
 
-  //   // temp
-  //   display: flex;
-  //   align-items: end;
-  // }
+  // REVIEWS
+  & .reviews {
+    grid-area: c;
+    display: none;
+    @media (min-width: $lgPhone) {
+      display: block;
+    }
+  }
+
+  // CONNECT
+  & .icons {
+    grid-area: d;
+    display: none;
+    @media (min-width: $tablet) {
+      display: block;
+    }
+
+    & > div {
+      margin-top: 1rem;
+      display: grid;
+      place-content: center;
+      gap: 1rem;
+
+      & > a {
+        --size: 60px;
+        color: var(--my-green);
+
+        & > svg {
+          height: var(--size);
+          width: var(--size);
+        }
+        &:hover {
+          color: var(--my-white);
+        }
+      }
+    }
+  }
 }

@@ -1,0 +1,1 @@
+The footerHeight set the footer height for the illusion of fixed background.

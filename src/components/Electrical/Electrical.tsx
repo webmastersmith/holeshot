@@ -55,7 +55,9 @@ export default function Electrical() {
           </For>
         </ul>
 
-        <Button style={{ '--height': '32px' }}>LET'S CONNECT</Button>
+        <Button style={{ '--height': '32px' }} href="/#contact">
+          LET'S CONNECT
+        </Button>
       </div>
     </section>
   );

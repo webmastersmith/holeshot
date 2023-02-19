@@ -1,5 +1,5 @@
 {
-  "name": "holeshot2",
+  "name": "holeshot",
   "scripts": {
     "dev": "solid-start dev",
     "build": "rm -rf ./dist/ && solid-start build",
@@ -8,11 +8,12 @@
   "type": "module",
   "devDependencies": {
     "@types/node": "^18.11.18",
+    "@types/nodemailer": "^6.4.7",
     "@types/sharp": "^0.31.1",
     "esbuild": "^0.14.54",
     "postcss": "^8.4.21",
     "sharp": "^0.31.3",
-    "solid-image": "^0.0.9",
+    "solid-image": "^0.0.14",
     "solid-start-node": "^0.2.15",
     "typescript": "^4.9.4",
     "vite": "^3.2.5"
@@ -22,6 +23,7 @@
     "@solidjs/meta": "^0.28.2",
     "@solidjs/router": "^0.7.0",
     "@splidejs/splide": "^4.1.4",
+    "nodemailer": "^6.9.1",
     "sass": "^1.58.0",
     "solid-icons": "^1.0.4",
     "solid-js": "^1.6.9",

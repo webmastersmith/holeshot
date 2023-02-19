@@ -18,7 +18,9 @@ export default function Nav() {
       <Logo style={{ '--height': '100px' }} />
 
       <div class={styles.phoneNumber}>
-        <Button style={{ '--height': '32px' }}>CONTACT US</Button>
+        <Button style={{ '--height': '32px' }} href="/#contact">
+          CONTACT US
+        </Button>
       </div>
     </header>
   );

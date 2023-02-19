@@ -6,6 +6,8 @@ import { AiOutlineCloseCircle } from 'solid-icons/ai';
 import { BsExclamationTriangleFill } from 'solid-icons/bs';
 import styles from './FormComponent.module.scss';
 import { Portal } from 'solid-js/web';
+import Button from '~/components/Button/Button';
+import { Mailer } from './nodemailer';
 
 export default function FormComponent() {
   // server form logic.
@@ -20,19 +22,28 @@ export default function FormComponent() {
     });
 
     // const sleep = (ms: number) => new Promise((res) => setTimeout(res, ms));
+    const { name, email, textarea } = schema.parse(form);
     try {
-      const { name, email, textarea } = schema.parse(form);
       // await sleep(3000);
-      console.log(name, email, textarea);
+
       // TODO
       // 1. send email!
+      Mailer(name, email, textarea);
+      console.log(name, email, textarea);
       return { name, email };
     } catch (e) {
+      // check for zod error.
       if (e instanceof ZodError) {
         const err = e.issues.map((er: any) => ({ field: er.path[0], msg: er.message }));
         // await sleep(3000);
         throw new ServerError(JSON.stringify(err), { status: 422 });
       }
+      // email
+      console.log('Email Error?');
+      console.log(e);
+      // try again.
+      console.log('Trying To Send Email Again:');
+      Mailer(name, email, textarea).catch((e) => console.log(e));
     }
   });
 
@@ -96,7 +107,6 @@ export default function FormComponent() {
             required
             placeholder="Email"
             spellcheck={false}
-            pattern="[-a-zA-Z0-9.!#$%&'*+/=?^_`{|}~]{1,64}@[-a-zA-Z0-9\.:]{1,75}\.+[-\w]{2,20}"
           />
           <p>
             <BsExclamationTriangleFill size={12} color="red" />
@@ -120,10 +130,9 @@ export default function FormComponent() {
             maxlength={800}
           ></textarea>
         </div>
-
-        <button class={styles.submit} type="submit" disabled={enrolling.pending}>
+        <Button type="submit" style={{ '--height': '32px' }}>
           CONTACT US
-        </button>
+        </Button>
       </Form>
 
       <Show when={enrolling.pending}>

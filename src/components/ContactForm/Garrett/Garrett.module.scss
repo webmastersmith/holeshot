@@ -6,7 +6,73 @@
   position: relative;
   z-index: 1;
 
-  p {
-    max-width: 400px;
+  // for image
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100%;
+  grid-template-areas: 'inside';
+
+  & .electrician {
+    grid-area: inside;
+    object-fit: cover;
+    opacity: 0.4;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+  }
+
+  & .content {
+    grid-area: inside;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    gap: 1rem;
+    padding-left: 1rem;
+
+    & > h1,
+    & > h3 {
+      font-weight: bold;
+      position: relative;
+    }
+
+    h3 > span {
+      color: var(--my-red);
+    }
+
+    & .years {
+      --size: 70px;
+      @media (min-width: 600px) {
+        --size: 125px;
+      }
+      position: absolute;
+      width: var(--size);
+      height: var(--size);
+      right: 3px;
+      top: 8px;
+      @media (min-width: 600px) {
+        right: 126px;
+        top: 2px;
+      }
+      filter: drop-shadow(6px 7px 7px rgba(0, 0, 0, 0.3));
+    }
+
+    & > .training {
+      font-style: italic;
+    }
+
+    & > p {
+      max-width: 400px;
+    }
+
+    & > ul {
+      // list-style-type: none;
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      @media (min-width: 600px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      font-weight: bold;
+    }
   }
 }

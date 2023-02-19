@@ -1,11 +1,7 @@
-import { Head, Title, Meta, Link, Body, Scripts } from "solid-start";
-import styles from "./contact.module.scss";
+import { Head, Title, Meta, Link, Body, Scripts } from 'solid-start';
+import styles from './contact.module.scss';
+import ContactForm from '~/components/ContactForm/ContactForm';
 
 export default function Contact() {
-  return (
-    <>
-      <Title>Contact</Title>
-      <h1>Contact Page</h1>
-    </>
-  );
+  return <ContactForm />;
 }

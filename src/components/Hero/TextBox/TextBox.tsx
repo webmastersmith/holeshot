@@ -16,7 +16,9 @@ export default function TextBox() {
           <p class={styles.contractor}>CONTRACTOR</p>
           <p class={styles.area}>SERVICING CENTRAL TEXAS AND SURROUNDING AREAS</p>
         </div>
-        <Button style={{ '--height': '32px' }}>CONTACT US</Button>
+        <Button style={{ '--height': '32px' }} href="/#contact">
+          CONTACT US
+        </Button>
       </div>
     </Show>
   );

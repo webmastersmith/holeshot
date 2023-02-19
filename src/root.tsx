@@ -6,7 +6,7 @@ import LinkBar from './components/Nav/LinkBar/LinkBar';
 import './root.css';
 
 const Footer = lazy(() => import('./components/Footer/Footer'));
-const Placeholder = lazy(() => import('./components/Footer/Placeholder/Placeholder'));
+const Placeholder = lazy(() => import('./components/Footer/FooterHeight/FooterHeight'));
 
 export default function Root() {
   return (

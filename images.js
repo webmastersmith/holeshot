@@ -1,5 +1,47 @@
 import createImages from 'solid-image';
 
+// CONTACT US
+// createImages([
+//   [
+//     'public/contactUs/years.png',
+//     'w=200;400;600;800',
+//     'f=avif;webp;png',
+//     'fallbackWidth=125',
+//     'fallbackFormat=png',
+//     'alt=Image of over 100 Years experience',
+//     'sizes=125px',
+//     'c=years',
+//     'clean=true',
+//   ],
+// ]);
+
+// electrician Image
+createImages([
+  [
+    'public/contactUs/electrician_9-16.png',
+    'w=650;800',
+    'f=avif;webp;png',
+    'fallbackWidth=320',
+    'fallbackFormat=png',
+    'alt=Image of electrician',
+    'c=electrician',
+    'sizes=90vw',
+    'media=(max-width: 600px)',
+    'clean=true',
+  ],
+  [
+    'public/contactUs/electrician.png',
+    'w=600;800',
+    'f=avif;webp;png',
+    'fallbackWidth=320',
+    'fallbackFormat=png',
+    'alt=Image of electrician',
+    'sizes=600px',
+    'media=(min-width: 601px)',
+    'c=electrician',
+  ],
+]);
+
 // TESTIMONIAL IMAGES
 // Fancy Trim
 // createImages([
@@ -12,7 +54,7 @@ import createImages from 'solid-image';
 //     'alt=Image of fancy trim',
 //     'sizes=170px',
 //     'c=fancyTrim',
-//     'enlarge=true',
+//     'clean=true',
 //   ],
 // ]);
 
