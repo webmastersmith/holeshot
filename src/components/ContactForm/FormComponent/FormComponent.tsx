@@ -22,13 +22,18 @@ export default function FormComponent() {
     });
 
     // const sleep = (ms: number) => new Promise((res) => setTimeout(res, ms));
-    const { name, email, textarea } = schema.parse(form);
+    let n = '',
+      emailName = '',
+      t = '';
     try {
+      const { name, email, textarea } = schema.parse(form);
+      n = name;
+      emailName = email;
+      t = textarea;
       // await sleep(3000);
 
-      // TODO
       // 1. send email!
-      Mailer(name, email, textarea);
+      Mailer(n, emailName, t);
       console.log(name, email, textarea);
       return { name, email };
     } catch (e) {
@@ -43,7 +48,7 @@ export default function FormComponent() {
       console.log(e);
       // try again.
       console.log('Trying To Send Email Again:');
-      Mailer(name, email, textarea).catch((e) => console.log(e));
+      Mailer(n, emailName, t).catch((e) => console.log(e));
     }
   });
 
